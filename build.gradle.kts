@@ -29,9 +29,9 @@ plugins {
     id("signing")
 }
 
-val tupleVersion: String by project
+val artefactVersion: String by project
 
-version = tupleVersion
+version = artefactVersion
 val projectUrl: String by project
 val projectGithubUrl: String by project
 val licenseName: String by project
@@ -72,7 +72,7 @@ publishing {
         create<MavenPublication>("tuple") {
             groupId = group.toString()
             artifactId = "tuple"
-            version = tupleVersion
+            version = artefactVersion
 
             pom {
                 name = "OnixByte Tuple"
