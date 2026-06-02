@@ -45,13 +45,12 @@ jobs:
         uses: crazy-max/ghaction-import-gpg@v6.3.0
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
           trust_level: 5
 
       - name: Creating PGP Ring Key
         run: |
           mkdir -p ~/.gnupg
-          echo ${{ secrets.GPG_PASSPHRASE }} | gpg --batch --yes --pinentry-mode loopback --passphrase-fd 0 --export-secret-keys -o ~/.gnupg/gpg_key.ring
+          gpg --batch --yes --export-secret-keys -o ~/.gnupg/gpg_key.ring
 
       - name: Restore gradle.properties
         env:
