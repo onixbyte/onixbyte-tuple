@@ -97,14 +97,14 @@ publishing {
                     developer {
                         id = "zihluwang"
                         name = "Zihlu Wang"
-                        email = "really@zihlu.wang"
+                        email = "real@zihluwang.me"
                         timezone = "Asia/Hong_Kong"
                     }
 
                     developer {
                         id = "siujamo"
                         name = "Siu Jam'o"
-                        email = "jamo.siu@outlook.com"
+                        email = "jamo.siu@gmail.com"
                         timezone = "Asia/Shanghai"
                     }
                 }
